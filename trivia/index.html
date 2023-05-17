@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Trivia!</title>
+    <script>
+      // TODO: Add code to check answers to questions
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <h2>Part 1: Multiple Choice</h2>
+        <hr />
+        <!-- TODO: Add multiple choice question here -->
+        <h3>What is the rarest M&M color</h3>
+        <button onclick="answer(this, 'red', 'q1-1')" class="answer1">
+          Red
+        </button>
+        <button onclick="answer(this, 'red', 'q1-1')" class="answer1">
+          Green
+        </button>
+        <button onclick="answer(this, 'greenyellow', 'q1-1')" class="answer1">
+          Brown
+        </button>
+        <span class="q1-1"></span>
+
+        <h3>What was the first soft drink in space?</h3>
+        <button class="answer2" onclick="answer(this, 'red', 'q1-2')">
+          Tea
+        </button>
+        <button class="answer2" onclick="answer(this, 'greenyellow', 'q1-2')">
+          Coca Cola
+        </button>
+        <button class="answer2" onclick="answer(this, 'red', 'q1-2')">
+          Beer
+        </button>
+        <span class="q1-2"></span>
+        <h3>
+          "Hendrick’s," "Larios," and "Seagram’s" are some of the best-selling
+          brands of which spirit?
+        </h3>
+        <button class="answer3" onclick="answer(this, 'greenyellow', 'q1-3')">
+          Gin
+        </button>
+        <button class="answer3" onclick="answer(this, 'red', 'q1-3')">
+          Vodka
+        </button>
+        <button class="answer3" onclick="answer(this, 'red', 'q1-3')">
+          Whiskey
+        </button>
+        <span class="q1-3"></span>
+      </div>
+
+      <div class="section">
+        <h2>Part 2: Free Response</h2>
+
+        <form action="">
+          <label
+            ><h3>
+              What famous US festival hosted over 350,000 fans in 1969?
+            </h3></label
+          >
+          <input
+            type="text"
+            name="answerbox"
+            class="q2-1"
+            placeholder="Type your answer"
+          />
+          <input
+            type="submit"
+            value="Confirm"
+            onclick="event.preventDefault(); answer1(this.form, 'q2-1', 'woodstock')"
+          />
+          <span class="q2-1"></span>
+        </form>
+
+        <form action="">
+          <label for=""
+            ><h3>
+              When Walt Disney was a child, which character did he play in his
+              school function?
+            </h3></label
+          >
+          <input
+            type="text"
+            name="answerbox"
+            placeholder="Type your answer"
+            class="q2-2"
+          />
+          <input
+            type="submit"
+            value="Confirm"
+            onclick="event.preventDefault(); answer1(this.form, 'q2-2', 'peter pan')"
+          />
+          <span class="q2-2"></span>
+        </form>
+
+        <form action="">
+          <label for=""
+            ><h3>Which member of the Beatles married Yoko Ono?</h3></label
+          >
+          <input
+            type="text"
+            placeholder="Type your answer"
+            name="answerbox"
+            class="q2-3"
+          />
+          <!-- John Lennon -->
+          <input
+            type="submit"
+            value="Confirm"
+            onclick="event.preventDefault(); answer1(this.form, 'q2-3', 'john lennon')"
+          />
+          <span class="q2-3"></span>
+        </form>
+
+        <hr />
+        <!-- TODO: Add free response question here -->
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

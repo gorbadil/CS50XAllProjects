@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Quoted
+{% endblock %}
+
+{% block main %}
+
+<h1> Welcome {{username}}! </h1>
+
+<p>Here is your current status</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Total Shares</th>
+        <th scope="col">Total Spend</th>
+        <th scope="col">Current Value</th>
+        <th scope="col">Symbol</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for i in user_result %}
+
+      <tr>
+        <td>{{i["share"]}}</td>
+        <td>{{i["spend"]|usd}}</td>
+        <td>{{i["current"]|usd}}</td>
+        <td>{{i["symbol"]}}</td>
+      </tr>
+
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Gain</th>
+        <th scope="col">Total</th>
+        <th scope="col">Cash</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>{{gain}}</td>
+        <td>{{total}}</td>
+        <td>{{cash}}</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+{% endblock %}

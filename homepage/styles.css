@@ -1,0 +1,153 @@
+:root {
+    --mx: 0;
+    --my: 0;
+  }
+
+  /* Title Of CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    background-color: var(--first);
+    color: var(--forth);
+  }
+  body {
+    background-color: var(--first);
+  }
+
+  :root {
+    --first: #212a3e;
+    --forth: #f1f6f9;
+    --second: #394867;
+    --third: #9ba4b5;
+  }
+
+  /* Root Colors */
+  .first-back {
+    background-color: var(--first);
+  }
+  .second-back {
+    background-color: var(--second);
+  }
+  .third-back {
+    background-color: var(--third);
+  }
+  .forth-back {
+    background-color: var(--forth);
+  }
+  .first-color {
+    color: var(--first);
+  }
+  .second-color {
+    color: var(--second);
+  }
+  .third-color {
+    color: var(--third);
+  }
+  .forth-color {
+    color: var(--forth);
+  }
+
+  /* Head Section */
+
+  .head-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--first);
+    color: var(--forth);
+    width: 100vw;
+    height: 70vh;
+  }
+
+  .head-image-section {
+    position: relative;
+    max-width: 100%;
+  }
+
+  .head-name-section {
+    margin: auto;
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .desc-area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .head-desc {
+    margin: 20px auto;
+    text-align: center;
+    display: inline;
+    width: 35vw;
+    height: 20vh;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cvmain {
+    text-align: center;
+    margin: 10vw;
+  }
+
+  .cvmain::after {
+    content: "";
+    display: block;
+    margin-top: 100px;
+    height: 3px;
+    background-color: var(--forth);
+  }
+
+  .exh1::after {
+    margin: 50px 0 50px 0;
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: var(--forth);
+  }
+
+  .cvdiv {
+    height: 100px;
+  }
+
+  th,
+  tr,
+  td {
+    line-height: 2rem;
+  }
+
+  @keyframes sparking {
+    0% {
+      left: calc(var(--mx - 10px));
+      top: calc(var(--my) - 10px);
+    }
+    100% {
+      background-color: transparent;
+      width: 0;
+      height: 0;
+      left: calc(var(--mx));
+      top: calc(var(--my));
+    }
+  }
+
+  .spark {
+    content: "asd";
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 3;
+    animation-name: sparking;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }

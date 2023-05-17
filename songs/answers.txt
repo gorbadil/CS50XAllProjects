@@ -1,0 +1,7 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+We could do that with comparing one listener songs and top songs. We could understand listeners how much like pop songs.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+Maybe we need more data for this songs. metronom maybe or avg hz for sons.

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+
+<p>Here is your history</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Num</th>
+        <th scope="col">Share</th>
+        <th scope="col">Spending</th>
+        <th scope="col">Symbol</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for i in history %}
+
+      <tr>
+        <td>{{i["id"]}}</td>
+        <td>{{i["share"]}}</td>
+        <td>{{i["spend"]}}</td>
+        <td>{{i["symbol"]}}</td>
+      </tr>
+
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
